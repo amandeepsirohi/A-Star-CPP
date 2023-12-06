@@ -46,7 +46,7 @@ bool isFinalDestination(int row, int col, Pair dest)
     return false;
 }
 
-// calc distance(heuristics)
+// calc distance(heuristics) Change this fxn accordingly
 double calcHVal(int row, int col, Pair dest)
 {
     return ((double)sqrt((row - dest.first) * (row - dest.first) +
