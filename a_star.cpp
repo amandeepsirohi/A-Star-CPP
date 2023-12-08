@@ -97,12 +97,14 @@ void traceFinalPath(cell cellInformation[][COL], Pair dest, int grid[][COL])
     //     }
     // }
     std::cout << std::endl;
-    std::cout << "The shortest path is represented by 8's , 1's are unblocked cells and 0's are blocked cells" << std::endl;
+    std::cout << "The shortest path is represented by Green blocks , White cells are unvisited , 1 represent unblocked and 0 represents blocked cells " << std::endl;
     for (int i = 0; i < ROW; i++)
     {
         for (int j = 0; j < COL; j++)
-        {
-            cout << grid[i][j] << " ";
+        {   if(grid[i][j] == 8) std::cout << "\033[3;42;30m " << to_string(1)  << " \033[0m";
+            // else std::cout << "\033[3;44;30m " << to_string(grid[i][j]) << " \033[0m";
+            else std::cout << "\033[1;47;35m " << to_string(grid[i][j]) << " \033[0m";
+            
         }
         cout << endl;
     }
